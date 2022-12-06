@@ -17,6 +17,7 @@ def error_response(exception):
 
 def base_view(fn):
     """Декоратор для вьюшек, обрабатывает исключения"""
+
     @functools.wraps(fn)
     def inner(request, *args, **kwargs):
         try:
@@ -24,4 +25,5 @@ def base_view(fn):
                 return fn(request, *args, **kwargs)
         except Exception as e:
             return error_response(e)
+
     return inner

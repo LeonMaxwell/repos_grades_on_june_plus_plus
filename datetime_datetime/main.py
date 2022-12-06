@@ -4,7 +4,7 @@ import calendar
 
 if __name__ == '__main__':
     # Создание объекта даты
-    d = datetime.date(2022, 12, 14)
+    d = datetime.datetime(2022, 10, 2)
     print(d)
 
     # Расчет между двумя датами
